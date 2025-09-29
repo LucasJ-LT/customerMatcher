@@ -1,5 +1,22 @@
 import pandas as pd
-
+DATA_DIR = r".\data"
+FILES = [
+    "Ship-to_VBU-GBM_DueDate_2025-06-02.xlsx",
+    "展示会_人とくるま展横浜.xlsx",
+    "電源セミナー申込者.xlsx",
+]
+LIKELY_HEADER_TOKENS = [
+    "ECC Ship-to",
+    "Cust",
+    "Cust_Name",    
+    "Address_1",
+    "City",
+    "Country",
+    "Sales_Coverage",
+    "End_Mkt_Segment",
+    "メールアドレス",
+    "会社名",
+]
 shipToFile = pd.read_excel(".\data\Ship-to_VBU-GBM_DueDate_2025-06-02.xlsx", sheet_name="JP Assignment List",header=2)
 cols = [
     "ECC Ship-to",
